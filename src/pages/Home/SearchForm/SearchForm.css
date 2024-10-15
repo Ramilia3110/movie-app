@@ -1,0 +1,96 @@
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url("../../../assets/hero.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+.hero-title {
+  font-size: 3rem;
+}
+
+.search-form {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 80%; /* Set width to 80% */
+  max-width: 800px; /* Optional: Limit max width for larger screens */
+  margin: 0 auto; /* Center the form */
+}
+
+.input-container {
+  display: flex; /* Use flex to align input and button */
+  justify-content: center; /* Center items */
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.search-form input[type="search"] {
+  flex: 1; /* Allow the input to take available space */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px 0 0 50px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  background-color: #ffcc00;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: -5px; /* Adjust spacing between input and button */
+}
+
+.search-form button:hover {
+  background-color: #e6b800;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem; /* Further reduce font size */
+  }
+
+  .search-form {
+    width: 90%; /* Increase width on smaller screens */
+  }
+
+  .search-form input[type="search"],
+  .search-form button {
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem; /* Even smaller font size for mobile */
+  }
+
+  .search-form input[type="search"],
+  .search-form button {
+    padding: 10px 15px; /* Smaller button padding and input padding */
+  }
+}

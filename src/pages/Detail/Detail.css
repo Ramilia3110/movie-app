@@ -1,0 +1,94 @@
+.detail-page {
+  display: flex;
+  flex-direction: column; /* Stack elements on smaller screens */
+  padding: 20px;
+  max-width: 800px; /* Set a max width for larger screens */
+  margin: 20px auto 0; /* Add margin on top and center the component */
+  background: rgba(30, 30, 30, 0.7); /* Dark background with transparency */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  backdrop-filter: blur(10px); /* Glassy effect */
+}
+
+.loading,
+.error {
+  text-align: center;
+  color: #ff0000; /* Red color for errors */
+  margin-top: 20px;
+}
+
+.detail-header {
+  display: flex;
+  flex-direction: column; /* Default to column on smaller screens */
+  align-items: center; /* Center the content */
+}
+
+.detail-poster {
+  width: 100%; /* Full width for responsiveness */
+  max-width: 300px; /* Limit max width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space below the image */
+  border-radius: 8px; /* Rounded corners for the poster */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.detail-info {
+  text-align: center; /* Center text for smaller screens */
+}
+
+.film-title {
+  font-size: 1.8rem; /* Larger font for the title */
+  margin: 10px 0;
+  color: #fff; /* Light color for better contrast */
+}
+
+.film-description {
+  margin: 10px 0;
+  line-height: 1.5; /* Improved readability */
+  color: #ddd; /* Slightly lighter color for description */
+}
+
+.link {
+  display: inline-block; /* Button-like appearance */
+  margin-top: 15px; /* Space above the link */
+  padding: 10px 20px;
+  background-color: #ffcc00; /* Highlight color */
+  color: #000; /* Text color */
+  text-decoration: none; /* No underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.link:hover {
+  background-color: #e6b800; /* Darker on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 600px) {
+  .detail-header {
+    flex-direction: row; /* Row layout on larger screens */
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  .detail-poster {
+    margin-right: 20px; /* Space between image and text */
+  }
+
+  .detail-info {
+    text-align: left; /* Left-align text on larger screens */
+  }
+}
+
+@media (min-width: 900px) {
+  .detail-page {
+    padding: 40px; /* Increase padding for larger screens */
+  }
+
+  .film-title {
+    font-size: 2rem; /* Larger font size for titles */
+  }
+
+  .film-description {
+    font-size: 1.1rem; /* Slightly larger font for better readability */
+  }
+}

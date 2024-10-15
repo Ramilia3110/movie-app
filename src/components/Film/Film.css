@@ -1,0 +1,55 @@
+.film-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #161515;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  height: 300px; /* Set a fixed height for the card */
+}
+
+.film-card:hover {
+  transform: translateY(-5px); /* Adds a hover effect to lift the card */
+}
+
+.film-poster {
+  width: 100%;
+  height: 70%; /* Adjust this value as needed */
+  border-bottom: 1px solid #ddd;
+  object-fit: cover;
+}
+
+.film-name {
+  margin: 10px;
+  font-size: 1.1rem;
+  color: #e5e2e2;
+  height: 3em; /* Set a fixed height for the title */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+}
+
+.film-card:hover .film-name {
+  color: #ffcc00; /* Highlight the title on hover */
+}
+
+@media (max-width: 768px) {
+  .film-card {
+    width: 100%;
+    height: auto; /* Remove fixed height on smaller screens */
+  }
+
+  .film-name {
+    font-size: 1rem;
+    height: auto; /* Remove fixed height for smaller screens */
+    -webkit-line-clamp: 3; /* Allow more lines on smaller screens */
+  }
+}

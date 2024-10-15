@@ -1,0 +1,21 @@
+.header {
+  position: sticky; /* Fixes the header at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #292c32; /* Background color */
+  color: white; /* Text color */
+  display: flex;
+  align-items: center;
+
+  padding: 0.1rem; /* Spacing around the header */
+  z-index: 10; /* Ensures it's on top of other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  text-decoration: none; /* Remove underline from the link */
+  color: white; /* Link color */
+  font-size: 20px;
+  padding-left: 20px; /* Font size for the logo */
+}
