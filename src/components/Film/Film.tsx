@@ -1,7 +1,7 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 import { IFilmsData } from "../../store/types";
 import { Link } from "react-router-dom";
-import "./Film.css"; // Import CSS for the card styling
+import "./Film.css";
 
 interface FilmProps {
   el: IFilmsData;
